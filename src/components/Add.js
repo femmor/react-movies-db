@@ -22,11 +22,10 @@ const Add = () => {
     })
   }
 
-  console.log(results)
-
   return (
     <div className="add-page">
       <div className="container">
+        <h1 className="add-title">Search and add your favorite movie to your watchlist</h1>
         <div className="add-content">
           <div className="input-wrapper">
             <input type="text" value={query} onChange={handleChangeQuery} placeholder="Search for a movie" />

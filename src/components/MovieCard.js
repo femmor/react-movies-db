@@ -8,7 +8,7 @@ const MovieCard = ({ movie, type }) => {
       <div className="overlay"></div>
 
       {poster_path ? (<img src={`https://image.tmdb.org/t/p/w300${poster_path}`} alt={`${title} Poster`}/>) : (<div className="filler-poster"></div>)}
-      <MovieControls type={type} movie={movie}/>
+      <MovieControls type={type} movie={movie} />
     </div>
   )
 }

@@ -325,11 +325,13 @@ header .nav-links li:last-child {
   font-size: 1.25rem;
   padding: 5px;
   margin: 0;
+  outline: none;
 }
 
 .ctrl-btn:hover {
   color: var(--tertiary);
   cursor: pointer;
+  outline: none;
 }
 
 .movie-page .no-movies {

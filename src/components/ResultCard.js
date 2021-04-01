@@ -4,12 +4,14 @@ import {GlobalContext} from "../context/GlobalState"
 const ResultCard = ({ movie }) => {
   const {title, poster_path, release_date, id} = movie
 
-  const {addMovieToWatchlist, watchlist} = useContext(GlobalContext)
+  const {addMovieToWatchlist, addMovieToWatched, watchlist, watched} = useContext(GlobalContext)
 
   // Search to see if the movie is already in the watchlist
   let storedMovie = watchlist.find(item => item.id === id)
+  let storedWatched = watched.find(item => item.id === id)
 
   const watchlistDisabled = storedMovie ? true : false
+  const watchedDisabled = storedWatched ? true : false
 
   return (
     <div className="result-card">
@@ -26,6 +28,9 @@ const ResultCard = ({ movie }) => {
         <div className="controls">
           <button className="light-btn" onClick={() => addMovieToWatchlist(movie)} disabled={watchlistDisabled}>
             Add to watchlist
+          </button>
+          <button className="light-btn" onClick={() => addMovieToWatched(movie)} disabled={watchedDisabled}>
+            Add to watched
           </button>
         </div>
       </div>

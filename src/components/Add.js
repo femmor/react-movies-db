@@ -22,6 +22,8 @@ const Add = () => {
     })
   }
 
+  console.log(results)
+
   return (
     <div className="add-page">
       <div className="container">

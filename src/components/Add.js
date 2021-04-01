@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import ResultCard from './ResultCard'
 
 const Add = () => {
   const [query, setQuery] = useState('')
@@ -19,8 +20,6 @@ const Add = () => {
         setResults([])
       }
     })
-
-    console.log(results)
   }
 
   return (
@@ -30,6 +29,16 @@ const Add = () => {
           <div className="input-wrapper">
             <input type="text" value={query} onChange={handleChangeQuery} placeholder="Search for a movie" />
           </div>
+
+          {results.length > 0 && (
+            <ul className="results">
+              {results.map(movie => (
+                <li key={movie.id}>
+                  <ResultCard movie={movie}/>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </div>

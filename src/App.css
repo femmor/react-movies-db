@@ -177,9 +177,11 @@ header .nav-links li:last-child {
 
 .result-card .poster-wrapper img,
 .filler-poster {
-  width: 75px;
-  height: 113px;
-  background-color: #dbdada;
+  width: 90px;
+  height: 125px;
+  background-image: url('./images/noimage.jpeg');
+  background-position: center center;
+  background-size: cover;
   border-radius: 5px;
   margin-right: 15px;
   display: block;

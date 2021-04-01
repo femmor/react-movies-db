@@ -3,6 +3,7 @@
 :root {
   --primary: #d62828;
   --secondary: #003049;
+  --tertiary: #ffe14a;
   --white: #fff;
 }
 
@@ -58,7 +59,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #ffe45e;
+  background-color: var(--tertiary);
   opacity: 1;
   cursor: pointer;
 }
@@ -295,7 +296,7 @@ header .nav-links li:last-child {
 }
 
 .movie-card:hover .overlay {
-  border: 3px solid var(--secondary);
+  border: 3px solid var(--primary);
 }
 
 .movie-card .inner-card-controls {
@@ -327,7 +328,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn:hover {
-  color: var(--secondary);
+  color: var(--tertiary);
   cursor: pointer;
 }
 

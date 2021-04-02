@@ -3,7 +3,7 @@ import {GlobalContext} from "../context/GlobalState"
 
 const MovieControls = ({ movie, type }) => {
   const {id} = movie
-  const { removeMovieFromWatchlist, addMovieToWatched } = useContext(GlobalContext)
+  const { removeMovieFromWatchlist, addMovieToWatched, removeMovieFromWatched, moveMovieToWatchlist } = useContext(GlobalContext)
 
   return (
     <div className="inner-card-controls">
@@ -20,10 +20,10 @@ const MovieControls = ({ movie, type }) => {
 
       {type === 'watched' && (
         <>
-          <button className="ctrl-btn" onClick={() => {}}>
+          <button className="ctrl-btn" onClick={() => {moveMovieToWatchlist(movie)}}>
             <i className="fa-fw far fa-eye-slash"></i>
           </button>
-          <button className="ctrl-btn" onClick={() => {}}>
+          <button className="ctrl-btn" onClick={() => {removeMovieFromWatched(id)}}>
             <i className="fa-fw fa fa-times"></i>
           </button>
         </>

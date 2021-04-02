@@ -113,18 +113,30 @@ header .inner-content {
 
 header a {
   color: var(--white);
-  font-size: 1.25rem;
+  font-size: 1.25rem; 
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-header a:hover {
+.brand {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.brand:hover {
   opacity: 0.7;
 }
 
+.brand img {
+  width: 30px
+}
+
 header .brand a {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.5rem;
+  padding-left: 5px;
 }
 
 header .nav-links {

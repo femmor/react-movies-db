@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Logo from "../images/app-logo.png"
 
 const Header = () => {
   return (
@@ -7,7 +8,8 @@ const Header = () => {
       <div className="container">
         <div className="inner-content">
           <div className="brand">
-            <Link to="/">Femmy's Watchlist</Link>
+            <img src={Logo} alt="App Logo"/>
+            <Link to="/">Movie Watchlist</Link>
           </div>
 
           <ul className="nav-links">
